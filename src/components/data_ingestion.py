@@ -9,6 +9,8 @@ from dataclasses import dataclass
 
 from src.components.data_transformation import DataTranformation, DataTransformationConfig
 
+from src.components.model_trainer import ModelTrainerConfig, ModelTrainer
+
 ## To define classs variables we bascially use init, but using `dataclass` we will be directly
 ## be able to define my class variable
 @dataclass  
@@ -54,4 +56,7 @@ if __name__ =="__main__":
     train_data, test_data = obj.initiate_data_ingestion()
 
     data_transformation = DataTranformation()
-    data_transformation.initiate_data_transformation(train_path=train_data, test_path=test_data)
+    train_arr, test_arr,_ = data_transformation.initiate_data_transformation(train_path=train_data, test_path=test_data)
+
+    model_trainer = ModelTrainer()
+    print(model_trainer.initiate_model_trainer(train_arr, test_arr))
