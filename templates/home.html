@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Enter Student Data</title>
+
+<style>
+    body {margin:50px; font-family: Arial;}
+    form {max-width:450px; margin:auto; font-size:18px;}
+    input, select {width:100%; padding:8px; margin-top:5px; margin-bottom:20px;}
+    button {padding:10px 20px; width:100%; font-size:18px; cursor:pointer;}
+</style>
+
+</head>
+<body>
+
+<h2 style="text-align:center;">Student Performance Prediction</h2><br>
+
+<form action="/predictdata" method="POST">
+
+    <label>Gender</label>
+    <select name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+
+    <label>Race / Ethnicity</label>
+    <select name="race ethnicity" required>
+        <option value="group A">Group A</option>
+        <option value="group B">Group B</option>
+        <option value="group C">Group C</option>
+        <option value="group D">Group D</option>
+        <option value="group E">Group E</option>
+    </select>
+
+    <label>Parental Level of Education</label>
+    <select name="parental level of education" required>
+        <option value="some high school">Some High School</option>
+        <option value="high school">High School</option>
+        <option value="some college">Some College</option>
+        <option value="associate's degree">Associate's Degree</option>
+        <option value="bachelor's degree">Bachelor's Degree</option>
+        <option value="master's degree">Master's Degree</option>
+    </select>
+
+    <label>Lunch Type</label>
+    <select name="lunch" required>
+        <option value="standard">Standard</option>
+        <option value="free/reduced">Free / Reduced</option>
+    </select>
+
+    <label>Test Preparation Course</label>
+    <select name="test preparation course" required>
+        <option value="none">None</option>
+        <option value="completed">Completed</option>
+    </select>
+
+    <label>Reading Score</label>
+    <input type="number" name="reading score" required>
+
+    <label>Writing Score</label>
+    <input type="number" name="writing score" required>
+
+    <button type="submit">Predict Score</button>
+
+</form>
+
+</body>
+</html>
